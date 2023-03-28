@@ -42,53 +42,51 @@ After constructing the dp map for both the first half data (dp1) and the second 
 
 
 ```
-       for (auto it : dp1)
-        {
-            int bits = it.first;
-            auto s = &(dp2[N / 2 - bits]);
-            sort(s->begin(), s->end());
+for (auto it : dp1)
+{
+    int bits = it.first;
+    auto s = &(dp2[N / 2 - bits]);
+    sort(s->begin(), s->end());
 
-            for (auto j : it.second)
-            {
-                int a = j;
+    for (auto j : it.second)
+    {
+        int a = j;
+        auto x1 = lower_bound(s->begin(), s->end(), S / 2 - a);
 
-                auto x1 = lower_bound(s->begin(), s->end(), S / 2 - a);
+        if (x1 == s->end())
+            x1--;
 
-                if (x1 == s->end())
-                    x1--;
-
-                if (abs(S - 2 * (*x1 + a)) < ret)
-                    ret = abs(S - 2 * (*x1 + a));
-
-            }
-        }
+        if (abs(S - 2 * (*x1 + a)) < ret)
+            ret = abs(S - 2 * (*x1 + a));
+    }
+}
 ```
 
 The basic method mentioned above can solve the problem. However, we can further optimize the process of building the dp map by using Gray code. Gray code changes only one bit at a time, allowing us to identify the altered bit and add or subtract the corresponding item number without having to iterate through all bits and summing all values again. This improvement results in a faster construction of the dp map.
 
 ```
 int build_half(map<int, vector<int>>& dp, vector<int>& nums, int from, int end)
+{
+    int old = 0;
+    int sum = 0;
+
+    dp[0].push_back(0);
+
+    for (int i = 1; i < 1 << (end - from); i++)
     {
-        int old = 0;
-        int sum = 0;
+        int gray = i ^ (i >> 1);
 
-        dp[0].push_back(0);
+        int diff = gray ^ old;
+        int index = __builtin_ctz(diff);
+        old = gray;
+        int bits = __builtin_popcount(gray);
 
-        for (int i = 1; i < 1 << (end - from); i++)
-        {
-            int gray = i ^ (i >> 1);
-
-            int diff = gray ^ old;
-            int index = __builtin_ctz(diff);
-            old = gray;
-            int bits = __builtin_popcount(gray);
-
-            if (gray & (1 << index))
-                sum += nums[index + from];
-            else
-                sum -= nums[index + from];
-            dp[bits].push_back(sum);
-        }
-        return 0;
+        if (gray & (1 << index))
+            sum += nums[index + from];
+        else
+            sum -= nums[index + from];
+        dp[bits].push_back(sum);
     }
+    return 0;
+}
 ```
