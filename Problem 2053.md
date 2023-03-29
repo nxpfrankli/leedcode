@@ -90,3 +90,6 @@ int build_half(map<int, vector<int>>& dp, vector<int>& nums, int from, int end)
     return 0;
 }
 ```
+
+The similar question: 
+https://leetcode.com/problems/split-array-with-same-average/
