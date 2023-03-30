@@ -16,9 +16,11 @@ In a segment tree, each non-leaf node represents a specific range of the array, 
 
 Some common operations that can be performed using a segment tree include:
 
-Range Sum Query: Calculate the sum of elements within a given range.
-Range Minimum Query: Find the minimum element within a given range.
-Range Maximum Query: Find the maximum element within a given range.
+    Range Sum Query: Calculate the sum of elements within a given range.
+
+    Range Minimum Query: Find the minimum element within a given range.
+
+    Range Maximum Query: Find the maximum element within a given range.
 
 The segment tree can also be modified to handle other types of range queries or to support different operations on the array, such as addition or multiplication. The key advantage of a segment tree is its ability to perform these operations efficiently and in a relatively short amount of time.
 
