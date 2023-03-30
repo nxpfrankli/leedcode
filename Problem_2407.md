@@ -99,3 +99,10 @@ public:
 };
 
 ```
+
+Similar easy version is: 
+https://leetcode.com/problems/longest-increasing-subsequence/
+
+There are nice greedy method for above problem: https://www.geeksforgeeks.org/longest-monotonically-increasing-subsequence-size-n-log-n/
+
+But not common as segment tree method.
