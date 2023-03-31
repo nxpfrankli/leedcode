@@ -1,5 +1,7 @@
 Title: Thoughts and Solution for LeetCode Problem 2035: Partition Array Into Two Arrays to Minimize Sum Difference
 
+TAG: binary search DP
+
 Link: https://leetcode.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/description/
 
 Overview: Problem 2035 on LeetCode requires partitioning elements into two separate arrays, A and B, in a way that minimizes the difference in their sums. Array A can be represented with 1 and array B with 0, leading to a permutation visualization of [11110000].

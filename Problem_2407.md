@@ -1,5 +1,7 @@
 Title: 2407. Longest Increasing Subsequence II
 
+TAG: segment tree
+
 1. **Initialize the segment tree**: Create a segment tree with a range from `min(nums)` to `max(nums)` to store the maximum subsequence length for each number in the range.
 2. **Process the input array**: Loop through the input array.
 3. **Query the segment tree**: For each element, query the segment tree for the longest subsequence length for all valid numbers in the range `[num[i]-k, num[i])`. Let's call the longest subsequence length `max_val`.

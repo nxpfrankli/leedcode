@@ -1,5 +1,7 @@
 Title: problem 2338 ou are given two integers n and maxValue, which are used to describe an ideal array.
 
+TAG: MATH DP
+
 A 0-indexed integer array arr of length n is considered ideal if the following conditions hold:
 
 Every arr[i] is a value from 1 to maxValue, for 0 <= i < n.

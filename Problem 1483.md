@@ -1,5 +1,7 @@
 Title 1483. Kth Ancestor of a Tree Node,  using C++
 
+TAG：binary code
+
 In the LeetCode problem 1483 "Kth Ancestor of a Tree Node," you are given a tree consisting of n nodes numbered from 0 to n-1, with an array parent[] where parent[i] is the parent of ith node. The tree node 0 is the tree's root, and each node has at most one parent.
 
 You need to implement the class TreeAncestor, which contains the following methods:
