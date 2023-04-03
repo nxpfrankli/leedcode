@@ -5,4 +5,5 @@ One way to optimize the use of Dynamic Programming (DP) is to divide a problem i
 Example question:
 
 * [Longest Increasing Subsequence II](Problem_2407.md)
+* [Count Increasing Quadruplets](Problem_2552.md)
 
