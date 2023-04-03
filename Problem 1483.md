@@ -1,6 +1,6 @@
 Title 1483. Kth Ancestor of a Tree Node,  using C++
 
-TAG：binary code
+TAG：binary lift
 
 In the LeetCode problem 1483 "Kth Ancestor of a Tree Node," you are given a tree consisting of n nodes numbered from 0 to n-1, with an array parent[] where parent[i] is the parent of ith node. The tree node 0 is the tree's root, and each node has at most one parent.
 
@@ -12,6 +12,8 @@ int getKthAncestor(int node, int k) - Returns the kth ancestor of the given node
 
 Here's a possible C++ solution:
 
+https://iq.opengenus.org/binary-lifting-k-th-ancestor-lowest-common-ancestor/#:~:text=Binary%20Lifting%20is%20a%20technique,two%20nodes%20in%20a%20tree.
+ 
 ```
 class TreeAncestor {
 public:
