@@ -1,0 +1,8 @@
+# Splite into two groups
+
+One way to optimize the use of Dynamic Programming (DP) is to divide a problem into two smaller groups. Sometimes, using DP directly on a problem can result in excessive computation. By splitting the problem into two smaller groups and applying DP to each group separately, the overall computation can be reduced. The two smaller groups can then be combined together to solve the original problem.
+
+Example question:
+
+* [Longest Increasing Subsequence II](Problem_2407.md)
+
